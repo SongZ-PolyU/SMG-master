@@ -22,11 +22,11 @@ Below are the official implementation of ***SMG-master***, which ***will be aval
 
 - Automated processing and analysis using SMG-master:
 
-https://github.com/SongZ-PolyU/SMG-master/issues/1#issue-2862354852
+https://github.com/user-attachments/assets/8a398ecf-6108-43fc-ae3f-6d3193e0fe27
 
 - User-friendly review and manual adjustment:
 
-https://github.com/SongZ-PolyU/SMG-master/issues/2#issue-2862371453
+https://github.com/user-attachments/assets/1544f121-6284-47ba-9c71-37a8c1510f53
 
 ## Overview
 
