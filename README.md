@@ -44,12 +44,10 @@ https://github.com/user-attachments/assets/1544f121-6284-47ba-9c71-37a8c1510f53
 ## Getting started
 
 The basic workflow comprises four key steps, detailed in our repository
+
 * **Loading data:** Users can load pre-captured data or connect wirelessly to wearable monitoring equipment for real-time data. Supported formats for loading images and videos include **JPEG**, **PNG**, **MP4**, and **AVI** supported by OpenCV.
-
 * **Presetting:** Users set essential parameters before running the image processing algorithm. This includes establishing a conversion between actual distance and image pixels using the **“Set image depth”** or **“Calibrate distance”** functions. The **“ROI setting”** function allows batch cropping and initial mask M_0 can be drawn for tracking algorithms via the **“Tracking ROI setting”** function. Hyperparameters can be configured through **“Advanced settings”**.
-
-* **Runing algorithm:** Once all settings are ready the users run the muscle recognition and post-processing algorithm by clicking the **“Start / Pause process”** button. The software supports one-frame processing with the **“Forward one frame”** function, displaying processed images and SMG features alongside other signals. 
-
+* **Runing algorithm:** Once all settings are ready the users run the muscle recognition and post-processing algorithm by clicking the **“Start / Pause process”** button. The software supports one-frame processing with the **“Forward one frame”** function, displaying processed images and SMG features alongside other signals.
 * **Manually adjusting and exporting:** Users can manually adjust incorrectly reconstructed structures by dragging control lines. Adjustments simultaneously recalculate SMG features, with the option **“Create control line”** to draw control lines if tracking is lost in certain frames. The **“Export”** function saves or overwrites an n×15 array of data, including frame index, timestamps, five SMG features, and eight sensor signals in an Excel format for better readability.
 
 ### Environment configuration for GPU inference
@@ -65,6 +63,23 @@ Conda activate env_name
 SMG-master.exe
 ```
 
+2. Choose processing strategy:
+
+User can choose segmentation or tracking for borders, and select individual fascicle segmentation or full-region orienation estimation for fascicle.
+
+<div style="display: flex; justify-content: space-around;">
+    <img src="docs/fascicle_segmentation.jpg" alt="Fascicle Segmentation" style="width: 30%;"/>
+    <img src="docs/orientation_estimation.jpg" alt="Orientation Estimation" style="width: 30%;"/>
+</div>
+
+3. Choose visualization mode:
+
+User can choose to review the **Segmentation results**/**post-processing results**/**Control line**
+![visualization](docs/visualization.jpg)
+
+4. Drag sliderbar to review all results.
+5. Drag control line to adjust poor results.
+
 ## Data format
 
 - Videos are expected to use .avi or .mp4 format.
@@ -74,7 +89,7 @@ SMG-master.exe
 demo0
 ├── demo0.mp4                // ultrasound video
 └── demo0.xls             // bio-singal and exported data
-
+```
 
 ## Methodology
 
@@ -86,4 +101,4 @@ Not applicable
 
 ## Contact
 
-[zhen0212.song@connect.polyu.hk](mailto:zhen0212.song@connect.polyu.hk) [zhen0212.song@connect.polyu.hk](mailto:zhen0212.song@connect.polyu.hk)
+[zhen0212.song@connect.polyu.hk](mailto:zhen0212.song@connect.polyu.hk)
